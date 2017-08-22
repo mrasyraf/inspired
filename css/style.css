@@ -4028,6 +4028,10 @@ table.table-mail tr td {
 .white-bg {
   background-color: #ffffff;
 }
+.login-blue {
+  background-color: #aecffd;
+  color: #000000;
+}
 .blue-bg,
 .bg-success {
   background-color: #1c84c6;
