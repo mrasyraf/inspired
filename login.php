@@ -52,7 +52,7 @@
                     <p style="color: black" class="text-muted text-center"><small>Do not have an account?</small></p>
                     <a style="color: black" class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
                 </form>
-                <p class="m-t"> <small>Inspired &copy; Solution4u 2017</small> </p>
+                <p class="m-t"> <small>Inspired &copy; <a href="http://solution4u.pe.hu/" target="_blank">Solution4u</a> 2017</small> </p>
             </div>
         </div>
 
