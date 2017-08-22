@@ -59,6 +59,8 @@
         <!-- Mainly scripts -->
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.redirect.js"></script>
+        <script src="plugin/bootbox/bootbox.min.js"></script>
 
     </body>
 
@@ -67,18 +69,18 @@
     $(function () {
         $(document).off('submit').on('submit', '#formLogin', function (e) {
             e.preventDefault();
-            alert("login");
-            $(this).find(":submit").attr("data-loading-text", "<i class='fa fa-circle-o-notch fa-spin'></i> Please Wait...").button('loading');
-//            $.post("ajax/ajax_staff.php", $("#addPeribadiStaff").serialize(), function (result) {
-//                if (result === "1") {
-//                    bootbox.alert("<?php // echo $ini_array[sys_transaction_success]  ?>", function () {
-//                    });
-//                } else if (result === "0") {
-//                    bootbox.alert("<?php // echo $ini_array[sys_transaction_failure]  ?>");
-//                } else {
-//                    bootbox.alert(result);
-//                }
-//            });
+            $(this).find(":submit").attr("data-loading-text", "<i class='fa fa-circle-o-notch fa-spin'></i>Analyzing your health...").button('loading');
+            $.post("ajax/ajax_login.php", $("#formLogin").serialize(), function (result) {
+                if (result === "1") {
+                    bootbox.alert("Login Successful.", function () {
+                        $.redirect("index.php");
+                    });
+                } else if (result === "0") {
+                    bootbox.alert("Login Unsuccessful.");
+                } else {
+                    bootbox.alert(result);
+                }
+            });
         });
     });
 </script>
