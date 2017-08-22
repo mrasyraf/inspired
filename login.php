@@ -6,7 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Hashtag | Login</title>
+        <title># | Login</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -30,12 +32,13 @@
                 </p>
                 <p>Login in. To enter the journey of healthy life.</p>
                 <form class="m-t" role="form" id="formLogin">
+                    <input type="hidden" class="form-control" name="action" value="login"> 
                     <div class="form-group">
                         <div class="input-group m-b">
                             <span class="input-group-addon">
                                 <i class='fa fa-envelope-o'></i>
                             </span> 
-                            <input type="email" class="form-control" placeholder="E-mail" required=""> 
+                            <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required=""> 
                         </div>
                     </div>
                     <div class="form-group">
@@ -43,7 +46,7 @@
                             <span class="input-group-addon">
                                 <i class='fa fa-key'></i>
                             </span> 
-                            <input type="password" class="form-control" placeholder="Password" required="">
+                            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="">
                         </div>
                     </div>
                     <button type="submit" id="submit" class="btn btn-success block full-width m-b">Login</button>
