@@ -3,3 +3,6 @@ session_start();
 session_destroy();
 
 ?>
+<script>
+    location = 'login.php';
+</script>

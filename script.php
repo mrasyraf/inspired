@@ -7,3 +7,7 @@
 
 <!-- Toastr -->
 <script src="js/plugins/toastr/toastr.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
