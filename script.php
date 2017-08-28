@@ -11,3 +11,7 @@
 <!-- Custom and plugin javascript -->
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
+<script src="plugin/bootbox/bootbox.min.js"></script>
+
+<!-- Select2 -->
+<script src="js/plugins/select2/select2.full.min.js"></script>

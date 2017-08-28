@@ -5539,6 +5539,20 @@ table.shoping-cart-table tr td:first-child {
 table.shoping-cart-table tr td:last-child {
   width: 80px;
 }
+table.profile-table {
+  margin-bottom: 0;
+}
+table.profile-table tr td {
+  border: none;
+  text-align: left;
+}
+table.profile-table tr td.desc,
+table.profile-table tr td:first-child {
+  text-align: left;
+}
+table.profile-table tr td:last-child {
+  width: 80px;
+}
 .product-name {
   font-size: 16px;
   font-weight: 600;

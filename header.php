@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <title># | Home</title>
+        <title># | Bring Healty Life 4 u</title>
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
@@ -19,9 +19,10 @@
 
         <!-- Gritter -->
         <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-
+        <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        
 
     </head>
 
@@ -31,18 +32,19 @@
                 <div class="sidebar-collapse">
                     <ul class="nav metismenu" id="side-menu">
                         <li class="nav-header">
-                            <div class="dropdown profile-element"> <span>
-                                    <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <div class="dropdown profile-element"> <span style="text-align: center">
+                                    <!--<img alt="image" class="img-circle" src="img/profile/avatar-2.png" />-->
+                                    <i class="fa fa-user fa-5x"></i>
                                 </span>
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                    <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                                        </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                                    <span class="clear"> 
+                                        <span class="block m-t-xs"> <strong class="font-bold">Daniel Asyraf</strong> <b class="caret"></b></span> 
+                                    </span> 
+                                </a>
                                 <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                    <li><a href="mailbox.html">Mailbox</a></li>
+                                    <li><a href="profile.php"><i class="fa fa-user-circle"></i> Profile</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="login.html">Logout</a></li>
+                                    <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
                                 </ul>
                             </div>
                             <div class="logo-element">
@@ -50,10 +52,19 @@
                             </div>
                         </li>
                         <li class="active">
-                            <a href="index.php"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                            <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                        </li>
+<!--                        <li>
+                            <a href="index.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span> <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li class="active"><a href="index.html">Dashboard v.1</a></li>
+                                <li><a href="index.php">Purchased History</a></li>
                             </ul>
+                        </li>-->
+                        <li>
+                            <a href="blank.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span></a>
+                        </li>
+                        <li>
+                            <a href="blank.php"><i class="fa fa-heart-o"></i> <span class="nav-label">My Wishlist</span></a>
                         </li>
                     </ul>
                 </div>
@@ -65,13 +76,13 @@
                             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
                             <form role="search" class="navbar-form-custom">
                                 <div class="form-group">
-                                    
+
                                 </div>
                             </form>
                         </div>
                         <ul class="nav navbar-top-links navbar-right">
                             <li>
-                                <span class="m-r-sm text-muted welcome-message">Welcome to #</span>
+                                <span class="m-r-sm text-muted welcome-message">Log in as Daniel </span>
                             </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -104,24 +115,9 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <div class="text-center link-block">
-                                            <a href="notifications.html">
-                                                <strong>See All Alerts</strong>
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </div>
-                                    </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="logout.php">
-                                    <i class="fa fa-sign-out"></i> Log out
-                                </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-            </div>
-
+               

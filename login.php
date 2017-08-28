@@ -38,7 +38,7 @@
                             <span class="input-group-addon">
                                 <i class='fa fa-envelope-o'></i>
                             </span> 
-                            <input type="email" class="form-control" placeholder="E-mail" name="email" id="email" required=""> 
+                            <input type="text" class="form-control" placeholder="E-mail" name="email" id="email"> 
                         </div>
                     </div>
                     <div class="form-group">
@@ -46,14 +46,14 @@
                             <span class="input-group-addon">
                                 <i class='fa fa-key'></i>
                             </span> 
-                            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="">
+                            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
                         </div>
                     </div>
                     <button type="submit" id="submit" class="btn btn-success block full-width m-b">Login</button>
 
-                    <a style="color: black" href="#"><small>Forgot password?</small></a>
+                    <a style="color: black" href="forgot_password.php"><small>Forgot password?</small></a>
                     <p style="color: black" class="text-muted text-center"><small>Do not have an account?</small></p>
-                    <a style="color: black" class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+                    <a style="color: black" class="btn btn-sm btn-white btn-block" href="register.php">Create an account</a>
                 </form>
                 <p class="m-t"> <small>Inspired &copy; <a href="http://solution4u.pe.hu/" target="_blank">Solution4u</a> 2017</small> </p>
             </div>
