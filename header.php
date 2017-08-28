@@ -33,8 +33,8 @@
                     <ul class="nav metismenu" id="side-menu">
                         <li class="nav-header">
                             <div class="dropdown profile-element"> <span style="text-align: center">
-                                    <!--<img alt="image" class="img-circle" src="img/profile/avatar-2.png" />-->
-                                    <i class="fa fa-user fa-5x"></i>
+                                    <img alt="image" class="img-circle" width="150px" height="150px" src="img/profile/avatar-3.png" />
+                                    <!--<i class="fa fa-user fa-5x"></i>-->
                                 </span>
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <span class="clear"> 
