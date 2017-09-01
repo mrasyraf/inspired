@@ -22,10 +22,13 @@
         <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-        
+
 
     </head>
-
+    <div class="animationload">
+        <div class="loader">
+        </div>
+    </div>
     <body>
         <div id="wrapper">
             <nav class="navbar-default navbar-static-side" role="navigation">
@@ -54,12 +57,12 @@
                         <li class="active">
                             <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
                         </li>
-<!--                        <li>
-                            <a href="index.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span> <span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li><a href="index.php">Purchased History</a></li>
-                            </ul>
-                        </li>-->
+                        <!--                        <li>
+                                                    <a href="index.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span> <span class="fa arrow"></span></a>
+                                                    <ul class="nav nav-second-level">
+                                                        <li><a href="index.php">Purchased History</a></li>
+                                                    </ul>
+                                                </li>-->
                         <li>
                             <a href="blank.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span></a>
                         </li>
@@ -120,4 +123,3 @@
                         </ul>
                     </nav>
                 </div>
-               

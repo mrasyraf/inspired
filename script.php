@@ -15,3 +15,13 @@
 
 <!-- Select2 -->
 <script src="js/plugins/select2/select2.full.min.js"></script>
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function () {
+            setTimeout(function () {
+                $("div").removeClass("animationload");
+            }, 1300);
+        });
+    })(jQuery);
+</script>
