@@ -22,6 +22,10 @@
         <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        
+        <!--slick-->
+        <link href="plugin/slick/slick.css" rel="stylesheet" type="text/css">
+        <link href="plugin/slick/slick-theme.css" rel="stylesheet" type="text/css">
 
 
     </head>

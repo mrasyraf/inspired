@@ -183,104 +183,211 @@ $lastvisit = date("d/m/Y h:i:s A");
 <!--content-->
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <div class="col-lg-3">
-            <div class="contact-box center-version">
-
-                <a href="profile.html">
-
-                    <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
-
-
-                    <h3 class="m-b-xs"><strong>Body Shampoo</strong></h3>
-
-                    <div class="font-bold">RM 25.00</div>
-                    <address class="m-t-md">
-                        <strong>Product Description</strong><br>
-                        Description
-                    </address>
-
-                </a>
-                <div class="contact-box-footer">
-                    <div class="m-t-xs btn-group">
-                        <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                    </div>
-                </div>
-
-            </div>
+        <div class="col-md-1">
+            
         </div>
-        <div class="col-lg-3">
-            <div class="contact-box center-version">
+        <div class="col-md-10">
+            <div class="auto-slide">
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
 
-                <a href="profile.html">
+                        <a href="profile.html">
 
-                    <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
 
 
-                    <h3 class="m-b-xs"><strong>Hair Shampoo</strong></h3>
+                            <h3 class="m-b-xs"><strong>Body Shampoo</strong></h3>
 
-                    <div class="font-bold">RM 23.00</div>
-                    <address class="m-t-md">
-                        <strong>Product Description</strong><br>
-                        Description
-                    </address>
+                            <div class="font-bold">RM 25.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
 
-                </a>
-                <div class="contact-box-footer">
-                    <div class="m-t-xs btn-group">
-                        <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
 
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="contact-box center-version">
+                        <a href="profile.html">
 
-                <a href="profile.html">
-
-                    <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
 
 
-                    <h3 class="m-b-xs"><strong>Marine Soap</strong></h3>
+                            <h3 class="m-b-xs"><strong>Hair Shampoo</strong></h3>
 
-                    <div class="font-bold">RM 45.00</div>
-                    <address class="m-t-md">
-                        <strong>Product Description</strong><br>
-                        Description
-                    </address>
+                            <div class="font-bold">RM 23.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
 
-                </a>
-                <div class="contact-box-footer">
-                    <div class="m-t-xs btn-group">
-                        <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
 
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="contact-box center-version">
+                        <a href="profile.html">
 
-                <a href="profile.html">
-
-                    <img alt="image" class="img-circle" src="img/products/headphones.jpg" />
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
 
 
-                    <h3 class="m-b-xs"><strong>Mineral Coffee</strong></h3>
+                            <h3 class="m-b-xs"><strong>Marine Soap</strong></h3>
 
-                    <div class="font-bold">RM 18.00</div>
-                    <address class="m-t-md">
-                        <strong>Product Description</strong><br>
-                        Description
-                    </address>
+                            <div class="font-bold">RM 45.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
 
-                </a>
-                <div class="contact-box-footer">
-                    <div class="m-t-xs btn-group">
-                        <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
 
+                        <a href="profile.html">
+
+                            <img alt="image" class="img-circle" src="img/products/headphones.jpg" />
+
+
+                            <h3 class="m-b-xs"><strong>Mineral Coffee</strong></h3>
+
+                            <div class="font-bold">RM 18.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
+
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
+
+                        <a href="profile.html">
+
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
+
+
+                            <h3 class="m-b-xs"><strong>Body Shampoo</strong></h3>
+
+                            <div class="font-bold">RM 25.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
+
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
+
+                        <a href="profile.html">
+
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
+
+
+                            <h3 class="m-b-xs"><strong>Hair Shampoo</strong></h3>
+
+                            <div class="font-bold">RM 23.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
+
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
+
+                        <a href="profile.html">
+
+                            <img alt="image" width="150" height="150" class="img-circle" src="img/products/headphones.jpg" />
+
+
+                            <h3 class="m-b-xs"><strong>Marine Soap</strong></h3>
+
+                            <div class="font-bold">RM 45.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
+
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="contact-box center-version">
+
+                        <a href="profile.html">
+
+                            <img alt="image" class="img-circle" src="img/products/headphones.jpg" />
+
+
+                            <h3 class="m-b-xs"><strong>Mineral Coffee</strong></h3>
+
+                            <div class="font-bold">RM 18.00</div>
+                            <address class="m-t-md">
+                                <strong>Product Description</strong><br>
+                                Description
+                            </address>
+
+                        </a>
+                        <div class="contact-box-footer">
+                            <div class="m-t-xs btn-group">
+                                <a class="btn btn-xs btn-white"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -291,7 +398,9 @@ $lastvisit = date("d/m/Y h:i:s A");
 
 <script type="text/javascript">
     $(document).ready(function () {
+
         setTimeout(function () {
+            ajaxindicatorstart("Please Wait...");
             toastr.options = {
                 closeButton: true,
                 progressBar: true,
@@ -299,6 +408,18 @@ $lastvisit = date("d/m/Y h:i:s A");
                 timeOut: 4000
             };
             toastr.success('Your #1 Store', 'Welcome to #');
+
         }, 1300);
+        setTimeout(function () {
+            ajaxindicatorstop();
+        }, 20000);
+
+        $('.auto-slide').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+        });
     });
 </script>

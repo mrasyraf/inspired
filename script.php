@@ -16,6 +16,10 @@
 <!-- Select2 -->
 <script src="js/plugins/select2/select2.full.min.js"></script>
 
+<!--slick-->
+<script type="text/javascript" src="plugin/slick/slick.min.js"></script>
+
+<script src="js/component.js"></script>
 <script type="text/javascript">
     (function ($) {
         $(document).ready(function () {
