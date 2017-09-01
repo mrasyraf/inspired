@@ -7,8 +7,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title># | Login</title>
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="img/manifest.json">
+        <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -24,7 +28,8 @@
             <div>
                 <div>
 
-                    <h1 style="color: white" class="logo-name">#</h1>
+                    <h1 style="color: white" class="logo-name"><img width="150px" height="150px" src="img/logo.png" /></h1>
+                    
 
                 </div>
                 <h3>Welcome to Hashtag</h3>
