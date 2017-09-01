@@ -35,7 +35,7 @@ $lastvisit = date("d/m/Y h:i:s A");
 </div>
 
 <!--content-->
-<div class="wrapper wrapper-content animated fadeInLeft">
+<div class="wrapper wrapper-content animated fadeInDown">
     <div class="row">
         <div class="col-lg-6">
             <div class="ibox-title">
@@ -145,6 +145,9 @@ $lastvisit = date("d/m/Y h:i:s A");
                     <table class="table table-striped" width="100%">
                         <thead>
                             <tr>
+                                <td width="5%">
+
+                                </td>
                                 <td width="10%">
                                     <strong>Bil</strong>
                                 </td>
@@ -160,20 +163,25 @@ $lastvisit = date("d/m/Y h:i:s A");
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    1.
-                                </td>
-                                <td style="vertical-align: top">
-                                    Asyraf Sumail
-                                </td>
-                                <td style="vertical-align: top">
-                                    +6017-7484636
-                                </td>
-                                <td style="vertical-align: top">
-                                    1 Jln Legenda 6, Taman Legenda<br>85300 Segamat, Johor
-                                </td>
-                            </tr>
+                            <?php for ($i = 0; $i < 3; $i++) { ?>
+                                <tr>
+                                    <td>
+                                        <input class="i-checks" type="radio" value="<?php echo $i ?>" id="checkAddress" name="checkAddress">
+                                    </td>
+                                    <td>
+                                        <?php echo $i + 1; ?>
+                                    </td>
+                                    <td style="vertical-align: top">
+                                        Asyraf Sumail
+                                    </td>
+                                    <td style="vertical-align: top">
+                                        +6017-7484636
+                                    </td>
+                                    <td style="vertical-align: top">
+                                        1 Jln Legenda 6, Taman Legenda<br>85300 Segamat, Johor
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -234,12 +242,12 @@ $lastvisit = date("d/m/Y h:i:s A");
                                         $resState = mysqli_query($conn, $queryState);
                                         while ($state = mysqli_fetch_assoc($resState)) {
                                             if ($stateCode == $state['apms_code']) {
-                                            ?> 
+                                                ?> 
                                                 <option selected="selected" value="<?php echo $state['apms_code'] ?>"><?php echo $state['apms_state_name'] ?></option>
-                                            <?php
-                                            } else { ?>
+                                            <?php } else {
+                                                ?>
                                                 <option value="<?php echo $state['apms_code'] ?>"><?php echo $state['apms_state_name'] ?></option>
-                                            <?php
+                                                <?php
                                             }
                                         }
                                         ?>
@@ -249,8 +257,8 @@ $lastvisit = date("d/m/Y h:i:s A");
                             <div class="col-md-12 form-group">
                                 <label class="col-sm-3 control-label"></label> 
                                 <div class="col-sm-9">
-                                    <button class="btn btn-sm btn-white m-t-n-xs" type="button" ><strong><i class="fa fa-times"></i>&nbsp;Cancel</strong></button>
-                                    <button class="btn btn-sm btn-primary m-t-n-xs" type="button"><strong><i class="fa fa-save"></i>&nbsp;Update</strong></button>
+                                    <button class="btn btn-sm btn-white m-t-n-xs" type="button" data-dismiss="modal" ><strong><i class="fa fa-times"></i>&nbsp;Cancel</strong></button>
+                                    <button class="btn btn-sm btn-primary m-t-n-xs" type="button" onclick="updateProfile()"><strong><i class="fa fa-save"></i>&nbsp;Update</strong></button>
                                 </div>
                             </div>
                         </form>
@@ -274,10 +282,36 @@ $lastvisit = date("d/m/Y h:i:s A");
         });
     }
 
+    function updateProfile() {
+        $.post("ajax/ajax_profile.php", $("#formUpdate").serialize(), function (result) {
+            if (result === "1") {
+                bootbox.alert("Profie Update Successful.", function () {
+//                    $.redirect("index.php");
+                });
+            } else if (result === "0") {
+                bootbox.alert("Profie Update Unsuccessful.");
+            } else {
+                bootbox.alert(result);
+            }
+        });
+    }
+
     function addAddress() {
         bootbox.alert("Add Shipment Address");
     }
 
+    $(function () {
+        $('.i-checks').click(function () {
+            if ($(this).is(':checked'))
+            {
+                var idAddress = $(this).val();
+                //update selected shipment address
+                $.post("ajax/ajax_profile.php", {action : "updateAddress", id : idAddress }, function (result) {
+//                    bootbox.alert(result);
+                });
+            }
+        });
+    });
 
 
 </script>
