@@ -412,7 +412,7 @@ $lastvisit = date("d/m/Y h:i:s A");
         }, 1300);
         setTimeout(function () {
             ajaxindicatorstop();
-        }, 20000);
+        }, 1400);
 
         $('.auto-slide').slick({
             slidesToShow: 4,

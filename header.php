@@ -65,7 +65,10 @@
                             </div>
                         </li>
                         <li class="active">
-                            <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Home</span></a>
+                            <a href="shop.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">Shop</span></a>
+                        </li>
+                        <li class="active">
+                            <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
                         </li>
                         <!--                        <li>
                                                     <a href="index.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span> <span class="fa arrow"></span></a>
