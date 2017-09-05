@@ -33,17 +33,15 @@ include 'config/general_config.php';
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.php"><i class="fa fa-user"></i>&nbsp;Login</a>
-                        &nbsp;
-                        <a class="navbar-brand" href="index.php"><i class="fa fa-cart-plus"></i>&nbsp;</a>
+                        <a class="navbar-brand" href="500.html"><i class="fa fa-user"></i>&nbsp;Log Masuk</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a class="page-scroll" href="#page-top">Home</a></li>
-                            <li><a class="page-scroll" href="#product">Product</a></li>
-                            <li><a class="page-scroll" href="#team">Team</a></li>
-                            <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
-                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+                            <li><a class="page-scroll" href="#page-top">Utama</a></li>
+                            <li><a class="page-scroll" href="#product">Produk</a></li>
+                            <!--<li><a class="page-scroll" href="#team">FAQ</a></li>-->
+                            <!--<li><a class="page-scroll" href="#testimonials">Testimoni</a></li>-->
+                            <li><a class="page-scroll" href="#contact">Hubungi Kami</a></li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +100,7 @@ include 'config/general_config.php';
                 <div class="row m-b-lg">
                     <div class="col-lg-12 text-center">
                         <div class="navy-line"></div>
-                        <h1>Our Product</h1>
+                        <h1>Produk Kami</h1>
                         <p></p>
                     </div>
                 </div>
@@ -131,6 +129,8 @@ include 'config/general_config.php';
 
                                     <div class="font-bold">RM <?php echo number_format($product['appd_product_price'],2); ?></div>
                                     <address class="m-t-md">
+                                        <strong>Kod Produk</strong><br>
+                                        <?php echo $product['appd_product_code']; ?><br><br>
                                         <strong>Kategori</strong><br>
                                         <?php getKategoriLabel($product['appd_remarks']) ?>
                                     </address>
@@ -155,13 +155,13 @@ include 'config/general_config.php';
             </div>
         </div>
     </section>
-
+        <?php /* 
     <section id="team" class="gray-section team">
         <div class="container">
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>Our Team</h1>
+                    <h1>FAQ</h1>
                     <p></p>
                 </div>
             </div>
@@ -195,31 +195,29 @@ include 'config/general_config.php';
             </div>
         </div>
     </section>
-
+    */ ?>
     <section class="features">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>Awards receive</h1>
+                    <h1>Anugerah Diterima</h1>
                     <p></p>
                 </div>
             </div>
             <div class="row features-block">
                 <div class="col-lg-3 features-text wow fadeInLeft">
-                    <small>INSPINIA</small>
-                    <h2>Perfectly designed </h2>
-                    <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                    <a href="" class="btn btn-primary">Learn more</a>
+                    <small>Akan Datang</small>
+                    <!--<h2></h2>-->
+                    <!--<p></p>-->
                 </div>
                 <div class="col-lg-6 text-right m-t-n-lg wow zoomIn">
-                    <img src="img/landing/iphone.jpg" class="img-responsive" alt="dashboard">
+                    <img src="img/landing/trophies.png" class="img-responsive" alt="dashboard">
                 </div>
                 <div class="col-lg-3 features-text text-right wow fadeInRight">
-                    <small>INSPINIA</small>
-                    <h2>Perfectly designed </h2>
-                    <p>INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p>
-                    <a href="" class="btn btn-primary">Learn more</a>
+                    <small>Akan Datang</small>
+                    <!--<h2>Perfectly designed </h2>-->
+                    <!--<p></p>-->
                 </div>
             </div>
         </div>
@@ -232,8 +230,8 @@ include 'config/general_config.php';
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>Our workflow</h1>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+                    <h1>Bagaimana untuk membeli?</h1>
+                    <!--<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>-->
                 </div>
             </div>
             <div class="row features-block">
@@ -242,59 +240,57 @@ include 'config/general_config.php';
                     <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
                         <div class="vertical-timeline-block">
                             <div class="vertical-timeline-icon navy-bg">
-                                <i class="fa fa-truck"></i>
+                                <i class="fa fa-whatsapp"></i>
                             </div>
 
                             <div class="vertical-timeline-content">
-                                <h2>Meeting</h2>
-                                <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing and products. Below please find the current status of the sale.
+                                <h2>Whatsapp</h2>
+                                <p>Want-to-buy <br/>
+                                    [Kod Produk] : [Kuantiti] <br/><br/>
+                                    Nama : <br/>
+                                    No. Telefon : <br/>
+                                    Alamat : <br/>
                                 </p>
-                                <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                                <span class="vertical-date"> Today <br/> <small>Dec 24</small> </span>
                             </div>
                         </div>
 
                         <div class="vertical-timeline-block">
                             <div class="vertical-timeline-icon navy-bg">
-                                <i class="fa fa-file-text"></i>
+                                <i class="fa fa-calculator"></i>
                             </div>
 
                             <div class="vertical-timeline-content">
-                                <h2>Decision</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-                                <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                                <span class="vertical-date"> Tomorrow <br/> <small>Dec 26</small> </span>
+                                <h2>Buat Pembayaran <small>Pembayaran Online / CDM</small></h2>
+                                <p>Maybank : 1010101101010</p>
+                                <p>Hantar gambar resit/bukti pembayaran melalui Whatsapp</p>
                             </div>
                         </div>
 
                         <div class="vertical-timeline-block">
                             <div class="vertical-timeline-icon navy-bg">
-                                <i class="fa fa-cogs"></i>
+                                <i class="fa fa-wechat"></i>
                             </div>
 
                             <div class="vertical-timeline-content">
-                                <h2>Implementation</h2>
-                                <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
-                                <a href="#" class="btn btn-xs btn-primary"> More info</a>
-                                <span class="vertical-date"> Monday <br/> <small>Jan 02</small> </span>
+                                <h2>Tunggu No. Tracking</h2>
+                                <p>Pihak kami akan hantar No. Tracking selepas penghantaran dibuat.</p>
+                                <a href="http://poslaju.com.my/track-trace-v2/" target="_blank" class="btn btn-xs btn-primary">Track</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
-
     </section>
 
     <!--testimoni-->
+    <?php /*
     <section id="testimonials" class="comments" style="margin-top: 0">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>What our Customer say</h1>
+                    <h1>Apa pelanggan kami kata</h1>
                     <p></p>
                 </div>
             </div>
@@ -405,14 +401,14 @@ include 'config/general_config.php';
         </div>
 
     </section>
-
+    */ ?>
     <!--contact-->
     <section id="contact" class="gray-section contact">
         <div class="container">
             <div class="row m-b-lg">
                 <div class="col-lg-12 text-center">
                     <div class="navy-line"></div>
-                    <h1>Contact Us</h1>
+                    <h1>Hubungi Kami</h1>
                     <p></p>
                 </div>
             </div>
@@ -433,9 +429,9 @@ include 'config/general_config.php';
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="https://api.whatsapp.com/send?phone=60177484636&text=Hi #. I have a question." target="_blank" class="btn btn-primary"><i class="fa fa-whatsapp"></i>&nbsp; Whatsapp Us</a>
+                    <a href="https://api.whatsapp.com/send?phone=60177484636&text=PM. Pertanyaan STG." target="_blank" class="btn btn-primary"><i class="fa fa-whatsapp"></i>&nbsp; Whatsapp Kami</a>
                     <p class="m-t-sm">
-                        Or follow us on social platform
+                        atau ikuti kami di laman sosial
                     </p>
                     <ul class="list-inline social-icon">
                         <li><a href="https://www.facebook.com/sitirohani.said" target="_blank"><i class="fa fa-facebook"></i></a></li>

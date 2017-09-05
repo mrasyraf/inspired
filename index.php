@@ -1,8 +1,8 @@
 <?php
 include 'config/general_config.php';
-if (!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] != true) {
-//    header('Location: login.php');
-}
+//if (!isset($_SESSION['isLoggedIn']) || $_SESSION['isLoggedIn'] != true) {
+    header('Location: shop.php');
+//}
 $username = $_SESSION['username'];
 
 $name = "MUHAMMAD ASYRAF BIN SUMAIL";
