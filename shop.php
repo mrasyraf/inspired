@@ -108,10 +108,17 @@ include 'config/general_config.php';
                 </div>
                 <div class="row">
                     <?php 
+                    $i = 0;
                     $queryGetProduct = "select * from appd_product_detail where appd_is_active = 1 order by appd_remarks, appd_product_name";
                     $resGetProduct = mysqli_query($conn, $queryGetProduct);
                     while($product = mysqli_fetch_assoc($resGetProduct)) {
+                        $i++;
+                        if($i == 4) {
+                            echo "<div class='row'>";
+//                            $i = 0;
+                        }
                     ?>
+                    
                         <div class="col-lg-3">
                             <div class="contact-box center-version wow zoomIn">
 
@@ -137,6 +144,12 @@ include 'config/general_config.php';
 
                             </div>
                         </div>
+                    <?php 
+                        if($i == 4) {
+                            echo "</div>";
+                            $i = 0;
+                        }
+                    ?>
                     <?php } ?>
                 </div>
             </div>
