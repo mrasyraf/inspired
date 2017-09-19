@@ -1,4 +1,4 @@
-<?php 
+<?php
 include 'config/general_config.php';
 ?>
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ include 'config/general_config.php';
                         <ul class="nav navbar-nav navbar-right">
                             <li><a class="page-scroll" href="#page-top">Utama</a></li>
                             <li><a class="page-scroll" href="#product">Produk</a></li>
-                            <!--<li><a class="page-scroll" href="#team">FAQ</a></li>-->
+                            <li><a class="page-scroll" href="#team">FAQ</a></li>
                             <!--<li><a class="page-scroll" href="#testimonials">Testimoni</a></li>-->
                             <li><a class="page-scroll" href="#contact">Hubungi Kami</a></li>
                         </ul>
@@ -105,18 +105,18 @@ include 'config/general_config.php';
                     </div>
                 </div>
                 <div class="row">
-                    <?php 
+                    <?php
                     $i = 0;
                     $queryGetProduct = "select * from appd_product_detail where appd_is_active = 1 order by appd_remarks, appd_product_name";
                     $resGetProduct = mysqli_query($conn, $queryGetProduct);
-                    while($product = mysqli_fetch_assoc($resGetProduct)) {
+                    while ($product = mysqli_fetch_assoc($resGetProduct)) {
                         $i++;
-                        if($i == 4) {
+                        if ($i == 4) {
                             echo "<div class='row'>";
 //                            $i = 0;
                         }
-                    ?>
-                    
+                        ?>
+
                         <div class="col-lg-3">
                             <div class="contact-box center-version wow zoomIn">
 
@@ -127,7 +127,7 @@ include 'config/general_config.php';
 
                                     <h3 class="m-b-xs"><strong><?php echo $product['appd_product_name'] ?></strong></h3>
 
-                                    <div class="font-bold">RM <?php echo number_format($product['appd_product_price'],2); ?></div>
+                                    <div class="font-bold">RM <?php echo number_format($product['appd_product_price'], 2); ?></div>
                                     <address class="m-t-md">
                                         <strong>Kod Produk</strong><br>
                                         <?php echo $product['appd_product_code']; ?><br><br>
@@ -144,18 +144,17 @@ include 'config/general_config.php';
 
                             </div>
                         </div>
-                    <?php 
-                        if($i == 4) {
+                        <?php
+                        if ($i == 4) {
                             echo "</div>";
                             $i = 0;
                         }
-                    ?>
+                        ?>
                     <?php } ?>
                 </div>
             </div>
         </div>
     </section>
-        <?php /* 
     <section id="team" class="gray-section team">
         <div class="container">
             <div class="row m-b-lg">
@@ -166,36 +165,59 @@ include 'config/general_config.php';
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 wow fadeInLeft">
-                    <div class="team-member">
-                        <img src="img/landing/avatar3.jpg" class="img-responsive img-circle img-small" alt="">
-                        <h4><span class="navy">Amelia</span> Smith</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus. </p>
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                Apakah bezanya Hai-O Garam Buluh dengan garam biasa?
+                                            </a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            Hai-O Garam Buluh menggunakan garam dijemur di bawah matahari yang berorganik dan 100% semulajadi sebagai sumber. Garam ini diperolehi daripada air laut yang kaya dengan tenaga bijih-bijih bawah tanah Pulau Xiongjin dan Pulau Yanping yang terletak di Pantai Barat Korea. Garam semulajadi ini dimasukkan ke dalam buluh yang berusia tiga tahun, kemudian ditutup dengan tanah liat, dimasukkan ke dalam relau bagas, dan dibakar dengan pokok pine sehingga buluh dibakar menjadi serbuk dan ketulan garam buluh terbentuk. Garam buluh telah menyingkirkan bahan berbahaya terhadap badan (misalnya logam berat dan bahan kimia) dalam proses pembuatannya, pada masa yang sama meningkatkan nilai nutrisinya. Kebanyakan garam melalui pemprosesan kimia, kandungan natrium adalah lebih tinggi, justeru itu, pengambilan masa panjang akan memudaratkan kesihatan.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                Bolehkah kanak-kanak dan ibu mengandung mengambil Hai-O Garam Buluh?
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Boleh, dengan saiz pengambilan yang kurang iaitu ¼ hingga ½ bungkus.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                                Bolehkah garam makan seharian diganti dengan Hai-O Garam Buluh?
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Boleh, Hai-O Garam Buluh kaya dengan bahan mineral dan elemen surih, dapat menggantikan garam biasa sepenuhnya.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member wow zoomIn">
-                        <img src="img/landing/avatar1.jpg" class="img-responsive img-circle" alt="">
-                        <h4><span class="navy">John</span> Novak</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 wow fadeInRight">
-                    <div class="team-member">
-                        <img src="img/landing/avatar2.jpg" class="img-responsive img-circle img-small" alt="">
-                        <h4><span class="navy">Peter</span> Johnson</h4>
-                        <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
             </div>
         </div>
     </section>
-    */ ?>
     <section class="features">
         <div class="container">
             <div class="row">
@@ -261,7 +283,7 @@ include 'config/general_config.php';
 
                             <div class="vertical-timeline-content">
                                 <h2>Buat Pembayaran <small>Pembayaran Online / CDM</small></h2>
-                                <p>Maybank : 1010101101010</p>
+                                <p>Maybank : 101114188948 - Siti Rohani Bt Said</p>
                                 <p>Hantar gambar resit/bukti pembayaran melalui Whatsapp</p>
                             </div>
                         </div>
@@ -285,123 +307,123 @@ include 'config/general_config.php';
 
     <!--testimoni-->
     <?php /*
-    <section id="testimonials" class="comments" style="margin-top: 0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="navy-line"></div>
-                    <h1>Apa pelanggan kami kata</h1>
-                    <p></p>
-                </div>
-            </div>
-            <div class="row features-block">
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar3.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
+      <section id="testimonials" class="comments" style="margin-top: 0">
+      <div class="container">
+      <div class="row">
+      <div class="col-lg-12 text-center">
+      <div class="navy-line"></div>
+      <h1>Apa pelanggan kami kata</h1>
+      <p></p>
+      </div>
+      </div>
+      <div class="row features-block">
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar3.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
 
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar1.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar1.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
 
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar2.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row features-block">
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar3.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar2.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div class="row features-block">
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar3.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
 
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar1.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar1.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
 
-                <div class="col-lg-4">
-                    <div class="bubble">
-                        "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-                    </div>
-                    <div class="comments-avatar">
-                        <a href="" class="pull-left">
-                            <img alt="image" src="img/landing/avatar2.jpg">
-                        </a>
-                        <div class="media-body">
-                            <div class="commens-name">
-                                Andrew Williams
-                            </div>
-                            <small class="text-muted">Company X from California</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="col-lg-4">
+      <div class="bubble">
+      "Uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      </div>
+      <div class="comments-avatar">
+      <a href="" class="pull-left">
+      <img alt="image" src="img/landing/avatar2.jpg">
+      </a>
+      <div class="media-body">
+      <div class="commens-name">
+      Andrew Williams
+      </div>
+      <small class="text-muted">Company X from California</small>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
 
-    </section>
-    */ ?>
+      </section>
+     */ ?>
     <!--contact-->
     <section id="contact" class="gray-section contact">
         <div class="container">
@@ -414,12 +436,12 @@ include 'config/general_config.php';
             </div>
             <div class="row m-b-lg">
                 <div class="col-lg-3 col-lg-offset-3">
-                    <address>
-                        <strong><span class="navy">#</span></strong><br/>
-                        1 Jln Legenda 6, Taman Legenda<br/>
-                        85300, Segamat, Johor MY<br/>
-                        <abbr title="Phone">HP:</abbr> (017) 748-4636
-                    </address>
+                    <!--                    <address>
+                                            <strong><span class="navy">#</span></strong><br/>
+                                            1 Jln Legenda 6, Taman Legenda<br/>
+                                            85300, Segamat, Johor MY<br/>
+                                            <abbr title="Phone">HP:</abbr> (017) 748-4636
+                                        </address>-->
                 </div>
                 <div class="col-lg-4">
                     <p class="text-color">
@@ -452,7 +474,7 @@ include 'config/general_config.php';
         <div class="modal-dialog">
             <div class="modal-content">
                 <div id="myvar">
-                    
+
                 </div>
             </div>
         </div>
@@ -472,68 +494,68 @@ include 'config/general_config.php';
 
     <script>
 
-        $(document).ready(function () {
+                                    $(document).ready(function () {
 
-            $('body').scrollspy({
-                target: '.navbar-fixed-top',
-                offset: 80
-            });
+                                        $('body').scrollspy({
+                                            target: '.navbar-fixed-top',
+                                            offset: 80
+                                        });
 
-            // Page scrolling feature
-            $('a.page-scroll').bind('click', function (event) {
-                var link = $(this);
-                $('html, body').stop().animate({
-                    scrollTop: $(link.attr('href')).offset().top - 50
-                }, 500);
-                event.preventDefault();
-                $("#navbar").collapse('hide');
-            });
-        });
+                                        // Page scrolling feature
+                                        $('a.page-scroll').bind('click', function (event) {
+                                            var link = $(this);
+                                            $('html, body').stop().animate({
+                                                scrollTop: $(link.attr('href')).offset().top - 50
+                                            }, 500);
+                                            event.preventDefault();
+                                            $("#navbar").collapse('hide');
+                                        });
+                                    });
 
-        var cbpAnimatedHeader = (function () {
-            var docElem = document.documentElement,
-                    header = document.querySelector('.navbar-default'),
-                    didScroll = false,
-                    changeHeaderOn = 200;
-            function init() {
-                window.addEventListener('scroll', function (event) {
-                    if (!didScroll) {
-                        didScroll = true;
-                        setTimeout(scrollPage, 250);
-                    }
-                }, false);
-            }
-            function scrollPage() {
-                var sy = scrollY();
-                if (sy >= changeHeaderOn) {
-                    $(header).addClass('navbar-scroll')
-                } else {
-                    $(header).removeClass('navbar-scroll')
-                }
-                didScroll = false;
-            }
-            function scrollY() {
-                return window.pageYOffset || docElem.scrollTop;
-            }
-            init();
+                                    var cbpAnimatedHeader = (function () {
+                                        var docElem = document.documentElement,
+                                                header = document.querySelector('.navbar-default'),
+                                                didScroll = false,
+                                                changeHeaderOn = 200;
+                                        function init() {
+                                            window.addEventListener('scroll', function (event) {
+                                                if (!didScroll) {
+                                                    didScroll = true;
+                                                    setTimeout(scrollPage, 250);
+                                                }
+                                            }, false);
+                                        }
+                                        function scrollPage() {
+                                            var sy = scrollY();
+                                            if (sy >= changeHeaderOn) {
+                                                $(header).addClass('navbar-scroll')
+                                            } else {
+                                                $(header).removeClass('navbar-scroll')
+                                            }
+                                            didScroll = false;
+                                        }
+                                        function scrollY() {
+                                            return window.pageYOffset || docElem.scrollTop;
+                                        }
+                                        init();
 
-        })();
+                                    })();
 
-        // Activate WOW.js plugin for animation on scrol
-        new WOW().init();
-        
-        function showModal(product) {
-        $.ajax({
-            type: "POST",
-            url: "ajax/ajax_product_detail.php",
-            data: {product: product},
-            success: function (data) {
-                //alert(data);
-                $('#myvar').html(data);
-                $('#modal-form').modal('show');
-            }
-        });
-    }
+                                    // Activate WOW.js plugin for animation on scrol
+                                    new WOW().init();
+
+                                    function showModal(product) {
+                                        $.ajax({
+                                            type: "POST",
+                                            url: "ajax/ajax_product_detail.php",
+                                            data: {product: product},
+                                            success: function (data) {
+                                                //alert(data);
+                                                $('#myvar').html(data);
+                                                $('#modal-form').modal('show');
+                                            }
+                                        });
+                                    }
 
     </script>
 
