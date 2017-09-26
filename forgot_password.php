@@ -6,13 +6,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title># | Forgot Password</title>
+        <title># | Lupa Kata Laluan</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
         <link href="css/animate.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Ladda style -->
+        <link href="css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
 
     </head>
 
@@ -24,10 +27,10 @@
                 <div class="col-md-12">
                     <div class="ibox-content">
 
-                        <h2 class="font-bold">Forgot password</h2>
+                        <h2 class="font-bold">Lupa Kata Laluan</h2>
 
                         <p>
-                            Enter your email address and your password will be reset and emailed to you.
+                            Sila masukkan emel anda dan kata laluan baru akan di emelkan kepada anda.
                         </p>
 
                         <div class="row">
@@ -36,10 +39,10 @@
                                 <form class="m-t" role="form" id="formResetPassword">
                                     <input type="hidden" class="form-control" name="action" value="resetPassword"> 
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email address" required="" name="email">
+                                        <input type="email" class="form-control" placeholder="EMEL" required id="apus_email" name="apus_email">
                                     </div>
 
-                                    <button type="submit" id="submit" class="btn btn-primary block full-width m-b">Send new password</button>
+                                    <button type="submit" id="submit" class="ladda-button btn btn-primary block full-width m-b" data-style="expand-right">Hantar kata laluan baru</button>
 
                                 </form>
                             </div>
@@ -50,10 +53,10 @@
             <br>
             <div class="row">
                 <div class="col-md-6">
-                    Inspired &copy; <a href="http://solution4u.pe.hu/" target="_blank">Solution4u</a>
+                    Inspired &copy; <a href="http://tsolution.com/" target="_blank">theSolution4u</a>
                 </div>
                 <div class="col-md-6 text-right">
-                    <small>© 2014-<?php echo date("Y") ?></small>
+                    <small>© 2017-<?php echo date("Y") ?></small>
                 </div>
             </div>
         </div>
@@ -62,21 +65,35 @@
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.redirect.js"></script>
         <script src="plugin/bootbox/bootbox.min.js"></script>
+
+        <!-- Ladda -->
+        <script src="js/plugins/ladda/spin.min.js"></script>
+        <script src="js/plugins/ladda/ladda.min.js"></script>
+        <script src="js/plugins/ladda/ladda.jquery.min.js"></script>
+        
+        <!-- Jquery Validate -->
+        <script src="js/plugins/validate/jquery.validate.min.js"></script>
     </body>
 
 </html>
 <script type="text/javascript">
+    
+    $("#formResetPassword").validate({});
     $(function () {
         $(document).off('submit').on('submit', '#formResetPassword', function (e) {
+            var l = $('#submit').ladda();
             e.preventDefault();
-            $(this).find(":submit").attr("data-loading-text", "<i class='fa fa-circle-o-notch fa-spin'></i> Resetting...").button('loading');
+            l.ladda('start');
             $.post("ajax/ajax_login.php", $("#formResetPassword").serialize(), function (result) {
+                l.ladda('stop');
                 if (result === "1") {
-                    bootbox.alert("Successful. A new password had been email to you.", function () {
+                    bootbox.alert("Kata laluan telah diubah. Sila semak emel anda untuk kata laluan baru.", function () {
                         $.redirect("login.php");
                     });
                 } else if (result === "0") {
-                    bootbox.alert("Unsuccessful. Please try again later.");
+                    bootbox.alert("Tidak berjaya. Sila cuba lagi.");
+                } else if (result === "999") {
+                    bootbox.alert("Emel tidak wujud.");
                 } else {
                     bootbox.alert(result);
                 }

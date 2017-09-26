@@ -4,5 +4,5 @@ session_destroy();
 
 ?>
 <script>
-    location = 'login.php';
+    location = 'shop.php';
 </script>

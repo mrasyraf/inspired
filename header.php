@@ -8,8 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title># | Bring Healty Life 4 u</title>
-<!--        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
+        <!--        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+                <link rel="icon" href="img/favicon.ico" type="image/x-icon">-->
         <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
@@ -19,6 +19,8 @@
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
         <!-- Toastr style -->
         <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
@@ -51,24 +53,24 @@
                                 </span>
                                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                     <span class="clear"> 
-                                        <span class="block m-t-xs"> <strong class="font-bold">Daniel Asyraf</strong> <b class="caret"></b></span> 
+                                        <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION['name'] ?></strong> <b class="caret"></b></span> 
                                     </span> 
                                 </a>
-                                <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                    <li><a href="profile.php"><i class="fa fa-user-circle"></i> Profile</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="logout.php"><i class="fa fa-sign-out"></i> Logout</a></li>
+                                <ul class="dropdown-menu animated fadeInLeft m-t-xs">
+                                    <!--<li><a href="profile.php"><i class="fa fa-user-circle"></i> Profile</a></li>-->
+                                    <!--<li class="divider"></li>-->
+                                    <li><a href="logout.php"><i class="fa fa-sign-out"></i> Log Keluar</a></li>
                                 </ul>
                             </div>
                             <div class="logo-element">
                                 #
                             </div>
                         </li>
-                        <li class="active">
-                            <a href="shop.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">Shop</span></a>
+                        <li>
+                            <a href="shop.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">Halaman Utama</span></a>
                         </li>
                         <li class="active">
-                            <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
+                            <a href="index.php"><i class="fa fa-home"></i> <span class="nav-label">Akaun Saya</span></a>
                         </li>
                         <!--                        <li>
                                                     <a href="index.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span> <span class="fa arrow"></span></a>
@@ -77,7 +79,7 @@
                                                     </ul>
                                                 </li>-->
                         <li>
-                            <a href="blank.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">My Purchased</span></a>
+                            <a href="blank.php"><i class="fa fa-cart-plus"></i> <span class="nav-label">Pembelian Saya</span></a>
                         </li>
                         <li>
                             <a href="blank.php"><i class="fa fa-heart-o"></i> <span class="nav-label">My Wishlist</span></a>
@@ -98,7 +100,7 @@
                         </div>
                         <ul class="nav navbar-top-links navbar-right">
                             <li>
-                                <span class="m-r-sm text-muted welcome-message">Log in as Daniel </span>
+                                <span class="m-r-sm text-muted welcome-message">Log masuk sebagai <?php echo $_SESSION['username'] ?> </span>
                             </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
