@@ -24,7 +24,7 @@ $lastvisit = trim_tarikh_masa($data['apus_last_visit']);
 $isPasswordDefault = $data['apus_is_default_password'];
 ?>
 <?php include 'header.php'; ?>
-<div class="alert alert-danger custom-alert" style="display: none">
+<div class="alert alert-danger custom-alert" >
     Your time is up. But you can move your mouse and get back to app.
 </div>
 <div class="row  border-bottom white-bg dashboard-header">
